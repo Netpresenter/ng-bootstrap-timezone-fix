@@ -11,7 +11,7 @@
     "version": "yarn changelog && git add CHANGELOG.md",
     "postversion": "yarn ngb:build && yarn demo:build",
     "preinstall": "node misc/preinstall.js",
-    "prepare": "is-ci || husky install .husky",
+    "prepare": "npm run build",
     "build": "yarn ngb:build && yarn demo:build",
     "test": "yarn ngb:lint && yarn ngb:test && yarn schematics:test",
     "tdd": "yarn ngb:tdd",
